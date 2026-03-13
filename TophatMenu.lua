@@ -14,8 +14,8 @@ local MiscSection = Tab:NewSection("Misc")
 local Tab = Window:NewTab("NDS")
 local NDSSection = Tab:NewSection("NDS")
 
-local Tab = Window:NewTab("Lumber Tycoon 2")
-local LT2Section = Tab:NewSection("Lumber Tycoon 2")
+local Tab = Window:NewTab("MM2")
+local MM2Section = Tab:NewSection("MM2")
 
 MainSection:NewKeybind("Press E to open/Close Menu", "Press E to open/Close Menu", Enum.KeyCode.E, function()
 	Library:ToggleUI()
@@ -1675,4 +1675,12 @@ elseif game.PlaceId == 1537690962 then
 elseif game.PlaceId == 189707 then
     loadstring(game:HttpGet('https://raw.githubusercontent.com/DevKron/Kron_Hub/refs/heads/main/nds'))("")
 end
+end)
+
+MM2Section:NewToggle("MM2 Menu", "A cheat menu for MM2", function(state)
+    if state then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Roman34296589/SnapSanixHUB/refs/heads/main/SnapSanixHUB.lua"))()
+    else
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Roman34296589/SnapSanixHUB/refs/heads/main/SnapSanixHUB.lua"))()
+    end
 end)
