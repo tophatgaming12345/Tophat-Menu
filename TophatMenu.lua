@@ -11,6 +11,12 @@ local ESPSection = Tab:NewSection("ESP")
 local Tab = Window:NewTab("Misc")
 local MiscSection = Tab:NewSection("Misc")
 
+local Tab = Window:NewTab("NDS")
+local NDSSection = Tab:NewSection("NDS")
+
+local Tab = Window:NewTab("Lumber Tycoon 2")
+local LT2Section = Tab:NewSection("Lumber Tycoon 2")
+
 MainSection:NewKeybind("Press E to open/Close Menu", "Press E to open/Close Menu", Enum.KeyCode.E, function()
 	Library:ToggleUI()
 end)
@@ -939,9 +945,9 @@ FunctionsSection:AddButton({
 end)
 MainSection:NewToggle("Fly", "Flys In The Air", function(state)
     if state then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Hotdog120823/FlyGuiV5/refs/heads/main/FlyGui"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/396abc/Script/refs/heads/main/FlyR15.lua"))()
     else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Hotdog120823/FlyGuiV5/refs/heads/main/FlyGui"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/396abc/Script/refs/heads/main/FlyR15.lua"))()
     end
 end)
 MainSection:NewToggle("Fling", "Flings players", function(state)
@@ -1652,4 +1658,21 @@ end)
 
 camera.FieldOfView = 500
 
+end)
+NDSSection:NewToggle("NDS Menu", "A menu for Natural Disaster Survival", function(state)
+    if state then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GoldenCheats/natural-disaster-script/refs/heads/main/NATURAL%20DISASTER%20FLING%20V2"))()
+    else
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GoldenCheats/natural-disaster-script/refs/heads/main/NATURAL%20DISASTER%20FLING%20V2"))()
+    end
+end)
+
+LT2Section:NewToggle("Lumber Tycoon 2 Menu", "A menu for Lumber Tycoon 2", function(state)
+if game.PlaceId == 13822889 then
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/DevKron/Kron_Hub/refs/heads/main/lt2new'))("")
+elseif game.PlaceId == 1537690962 then
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/DevKron/Kron_Hub/refs/heads/main/bss'))("")
+elseif game.PlaceId == 189707 then
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/DevKron/Kron_Hub/refs/heads/main/nds'))("")
+end
 end)
